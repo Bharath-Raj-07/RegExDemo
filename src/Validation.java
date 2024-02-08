@@ -56,9 +56,23 @@ public class Validation{
             Matcher match = regex.matcher(tempnum);
             if (match.matches()) {
                 p.setPhonenumber(tempnum);
-                System.out.println("Phone Number = "+p.getPhoneNumber());break;
+                System.out.println("Phone Number = "+p.getPhonenumber());break;
             } else{
                 System.out.println("Enter Valid Phone Number : ");
+            }
+        }
+    }
+    public void password(){
+        System.out.println("Enter your Password : ");
+        for(int i=0;;i++) {
+            String temppass = sc.nextLine();
+            Pattern regex = Pattern.compile("^[A-Za-z0-9!@#$%^&*_+]{8}+$");
+            Matcher match = regex.matcher(temppass);
+            if (match.matches()) {
+                p.setPassword(temppass);
+                System.out.println("Password = "+p.getPassword());break;
+            } else{
+                System.out.println("Enter Valid Password : ");
             }
         }
     }

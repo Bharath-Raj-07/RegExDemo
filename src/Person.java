@@ -3,6 +3,7 @@ public class Person {
     private String lastname;
     private String email;
     private String phonenumber;
+    private String password;
 
     public String getFirstname() {
         return firstname;
@@ -24,12 +25,20 @@ public class Person {
 
     public void setEmail(String email) { this.email = email; }
 
-    public String getPhoneNumber() {
+    public String getPhonenumber() {
         return phonenumber;
     }
 
-    public void setPhonenumber(String number) {
-        this.phonenumber = number;
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
@@ -39,6 +48,7 @@ public class Person {
                 ", lastname='" + lastname + '\'' +
                 ", email='" + email + '\'' +
                 ", phonenumber='" + phonenumber + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }
