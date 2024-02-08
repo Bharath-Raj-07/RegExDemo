@@ -4,7 +4,9 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to Regular Expresssion ");
-        Check c = new Check();
-        c.firstname();
+        Validation validate= new Validation();
+        validate.fname();
+        validate.lname();
+        validate.display();
     }
 }
