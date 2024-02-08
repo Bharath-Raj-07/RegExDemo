@@ -1,6 +1,7 @@
 public class Person {
     private String firstname;
     private String lastname;
+    private String email;
 
 
 
@@ -20,11 +21,16 @@ public class Person {
         this.lastname = lastname;
     }
 
+    public String getEmail() { return email; }
+
+    public void setEmail(String email) { this.email = email; }
+
     @Override
     public String toString() {
         return "Person{" +
                 "firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 }

@@ -7,6 +7,7 @@ public class Main {
         Validation validate= new Validation();
         validate.fname();
         validate.lname();
+        validate.e_mail();
         validate.display();
     }
 }
