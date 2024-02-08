@@ -23,7 +23,7 @@ public class Validation{
     public void lname(){
         System.out.println("Enter your Last Name :");
         for(int i=0;;i++) {
-            String templast = sc.next();
+            String templast = sc.nextLine();
             Pattern regex = Pattern.compile("^[A-Z]{1}[a-z]{1}[a-z]+$");
             Matcher match = regex.matcher(templast);
             if (match.matches()) {
@@ -37,14 +37,28 @@ public class Validation{
     public void e_mail(){
         System.out.println("Enter your Mail ID :");
         for(int i=0;;i++) {
-            String tempemail = sc.next();
-            Pattern regex = Pattern.compile("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$");
+            String tempemail = sc.nextLine();
+            Pattern regex = Pattern.compile("^[a-zA-Z0-9]+(\\.[a-zA-Z0-9]+)@[a-zA-Z]+(\\.[a-zA-Z]{2,})(\\.[a-zA-Z]{2,})?$");
             Matcher match = regex.matcher(tempemail);
             if (match.matches()) {
                 p.setEmail(tempemail);
                 System.out.println("Email ID = "+p.getEmail());break;
             } else{
                 System.out.println("Enter Valid Email ID :");
+            }
+        }
+    }
+    public void phnumber(){
+        System.out.println("Enter your Phone Number : ");
+        for(int i=0;;i++) {
+            String tempnum = sc.nextLine();
+            Pattern regex = Pattern.compile("^[+]{1}\\d{2} \\d{10}$");
+            Matcher match = regex.matcher(tempnum);
+            if (match.matches()) {
+                p.setPhonenumber(tempnum);
+                System.out.println("Phone Number = "+p.getPhoneNumber());break;
+            } else{
+                System.out.println("Enter Valid Phone Number : ");
             }
         }
     }

@@ -8,6 +8,7 @@ public class Main {
         validate.fname();
         validate.lname();
         validate.e_mail();
+        validate.phnumber();
         validate.display();
     }
 }
