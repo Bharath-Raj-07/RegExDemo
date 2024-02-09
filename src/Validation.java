@@ -6,7 +6,7 @@ public class Validation{
     Person p = new Person();
     Scanner sc = new Scanner(System.in);
 
-    public void fname(){
+    public void firstname(){
         System.out.println("Enter your First Name :");
         for(int i=0;;i++) {
             String tempfirst = sc.next();
@@ -20,7 +20,7 @@ public class Validation{
             }
         }
     }
-    public void lname(){
+    public void lastname(){
         System.out.println("Enter your Last Name :");
         for(int i=0;;i++) {
             String templast = sc.nextLine();
@@ -34,7 +34,7 @@ public class Validation{
             }
         }
     }
-    public void e_mail(){
+    public void email(){
         System.out.println("Enter your Mail ID :");
         for(int i=0;;i++) {
             String tempemail = sc.nextLine();
@@ -48,7 +48,7 @@ public class Validation{
             }
         }
     }
-    public void phnumber(){
+    public void phonenumber(){
         System.out.println("Enter your Phone Number : ");
         for(int i=0;;i++) {
             String tempnum = sc.nextLine();
@@ -66,12 +66,13 @@ public class Validation{
         System.out.println("Enter your Password : ");
         for(int i=0;;i++) {
             String temppass = sc.nextLine();
-            Pattern regex = Pattern.compile("^[A-Za-z0-9!@#$%^&*_+]{8}+$");
+            Pattern regex = Pattern.compile("^((?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])((?=.*[!@#$%^&*_+.']).{1}).{8,})$");
             Matcher match = regex.matcher(temppass);
             if (match.matches()) {
                 p.setPassword(temppass);
                 System.out.println("Password = "+p.getPassword());break;
-            } else{
+            }
+            else{
                 System.out.println("Enter Valid Password : ");
             }
         }
